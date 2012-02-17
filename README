@@ -1,0 +1,16 @@
+//////////////////////////////////////////////////////////////////////////
+// SysGraph : Sysstat Graphical Viewer
+//                   Copyright Koujinogaku (2012)
+//
+// Install  : 1. Setup sysstat that is Linux system tool.
+//                 ex. root# yum install sysstat
+//            2. Setup Apache 2.x with PHP 5.x
+//                 ex. root# yum install httpd php
+//            3. Allow the apache acount to execute command of sar.
+//                 PHP can access to sar command by default.
+//            4. Copy sysgraph.php to htdocs.
+//                 ex. root# cp sysgraph.php /var/www/html/.
+//            5. Access to sysgraph.php on apache from web browsers.
+//                 ex. http://web/sysgraph.php
+//            6. You can control to access by .htaccess or any methods.
+/////////////////////////////////////////////////////////////////////////
