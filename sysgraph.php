@@ -162,14 +162,29 @@ class Monitor {
 
   public function formatCpu($data)
   {
-    $formated = array(
-      array('Label' => 'Time',   'Data' => $this->listColumn($data,0,'string')),
-      array('Label' => '%User',  'Data' => $this->listColumn($data,2,'int',null,1,null,200)),
-      array('Label' => '%Nice',  'Data' => $this->listColumn($data,3,'int',null,1,null,200)),
-      array('Label' => '%Steal', 'Data' => $this->listColumn($data,6,'int',null,1,null,200)),
-      array('Label' => '%Sys',   'Data' => $this->listColumn($data,4,'int',null,1,null,200)),
-      array('Label' => '%IO',    'Data' => $this->listColumn($data,5,'int',null,1,null,200)),
-    );
+    $machineType='general';
+    switch($machineType) {
+    case 'serversmansentos5':
+      $formated = array(
+        array('Label' => 'Time',   'Data' => $this->listColumn($data,0,'string')),
+        array('Label' => '%User',  'Data' => $this->listColumn($data,2,'int',null,1,null,200)),
+        array('Label' => '%Nice',  'Data' => $this->listColumn($data,3,'int',null,1,null,200)),
+        array('Label' => '%Steal', 'Data' => $this->listColumn($data,6,'int',null,1,null,200)),
+        array('Label' => '%Sys',   'Data' => $this->listColumn($data,4,'int',null,1,null,200)),
+        array('Label' => '%IO',    'Data' => $this->listColumn($data,5,'int',null,1,null,200)),
+      );
+      break;
+    default:
+      $formated = array(
+        array('Label' => 'Time',   'Data' => $this->listColumn($data,0,'string')),
+        array('Label' => '%User',  'Data' => $this->listColumn($data,2)),
+        array('Label' => '%Nice',  'Data' => $this->listColumn($data,3)),
+        array('Label' => '%Steal', 'Data' => $this->listColumn($data,6)),
+        array('Label' => '%Sys',   'Data' => $this->listColumn($data,4)),
+        array('Label' => '%IO',    'Data' => $this->listColumn($data,5)),
+      );
+      break;
+    }
     return $formated;
   }
 
