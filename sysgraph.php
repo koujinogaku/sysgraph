@@ -13,7 +13,7 @@
 //                 ex. root# cp sysgraph.php /var/www/html/.
 //            5. Access to sysgraph.php on apache from web browsers.
 //                 ex. http://web/sysgraph.php
-//            6. You can control to access by .htaccess or any methods.
+//            6. You can control to access by .htaccess and some way.
 /////////////////////////////////////////////////////////////////////////
 
 class Monitor {

@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////
 // SysGraph : Sysstat Graphical Viewer
-//                   Copyright Koujinogaku (2012)
+//                   Copyright Koujinogaku (2012-2013)
 //
 // Install  : 1. Setup sysstat that is Linux system tool.
 //                 ex. root# yum install sysstat
@@ -12,5 +12,5 @@
 //                 ex. root# cp sysgraph.php /var/www/html/.
 //            5. Access to sysgraph.php on apache from web browsers.
 //                 ex. http://web/sysgraph.php
-//            6. You can control to access by .htaccess or any methods.
+//            6. You can control to access by .htaccess and some way.
 /////////////////////////////////////////////////////////////////////////
