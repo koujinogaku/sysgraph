@@ -258,6 +258,12 @@ switch($cmd) {
 $formatedData = json_encode($formatedData);
 $graphType = $monitor->getGraphType($cmd);
 
+if(isset($_SERVER["HTTPS"])) {
+  $protocol="https";
+}
+else {
+  $protocol="http";
+}
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -266,9 +272,9 @@ $graphType = $monitor->getGraphType($cmd);
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="content-style-type" content="text/css">
 <meta http-equiv="content-script-type" content="text/javascript">
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dijit/themes/claro/document.css">
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dijit/themes/claro/claro.css">
-<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" type="text/javascript" djConfig="parseOnLoad:true"></script>
+<link rel="stylesheet" href="<?php echo $protocol?>://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dijit/themes/claro/document.css">
+<link rel="stylesheet" href="<?php echo $protocol?>://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dijit/themes/claro/claro.css">
+<script src="<?php echo $protocol?>://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" type="text/javascript" djConfig="parseOnLoad:true"></script>
 <script>
     dojo.require("dijit.dijit"); // loads the optimized dijit layer
     //dojo.require("dijit.Calendar");
